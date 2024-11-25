@@ -2,16 +2,10 @@
 const nextConfig = {
   output: 'standalone',
   images: {
-    unoptimized: true,
-    domains: ['nextjs.org']
+    unoptimized: true
   },
-  async rewrites() {
-    return [
-      {
-        source: '/api/:path*',
-        destination: 'https://tech0-gen-8-step3-testapp-py2-25.azurewebsites.net/api/:path*'
-      }
-    ]
+  env: {
+    NEXT_PUBLIC_API_URL: process.env.NEXT_PUBLIC_API_URL
   }
 };
 
