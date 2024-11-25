@@ -1,12 +1,8 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   output: 'standalone',
-  images: {
-    unoptimized: true,
-    domains: ['nextjs.org']
-  },
-  env: {
-    NEXT_PUBLIC_API_URL: process.env.NEXT_PUBLIC_API_URL
+  experimental: {
+    outputStandalone: true
   }
 };
 
