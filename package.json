@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "NODE_ENV=production DEBUG=* next start -p ${PORT:-8080}",
+    "start": "NODE_ENV=production DEBUG=next:* next start -p ${PORT:-8080}",
     "lint": "next lint"
   },
   "dependencies": {
