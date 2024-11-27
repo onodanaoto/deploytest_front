@@ -1,9 +1,10 @@
 import Image from "next/image";
+import { FormEvent } from 'react';
 
 export default function Home() {
-    const handleSubmit = async (e) => {
+    const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
         e.preventDefault();
-        const date = new Date().toISOString().split('T')[0]; // 現在の日付を取得
+        const date = new Date().toISOString().split('T')[0];
         const res = await fetch(`${process.env.NEXT_PUBLIC_BACKEND_URL}/api/askdate`, {
             method: 'POST',
             headers: {
