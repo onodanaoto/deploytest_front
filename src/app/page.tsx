@@ -3,7 +3,7 @@ import Image from "next/image";
 export default function Home() {
     const handleSubmit = async (e) => {
         e.preventDefault();
-        const date = ...; // 日付を取得するロジックを追加
+        const date = new Date().toISOString().split('T')[0]; // 現在の日付を取得
         const res = await fetch(`${process.env.NEXT_PUBLIC_BACKEND_URL}/api/askdate`, {
             method: 'POST',
             headers: {
@@ -12,12 +12,13 @@ export default function Home() {
             body: JSON.stringify({ date }),
         });
         const data = await res.json();
-        // 取得したデータを処理するロジックを追加
     };
 
     return (
         <div>
-            {/* フォームやその他のコンテンツ */}
+            <form onSubmit={handleSubmit}>
+                <button type="submit">送信</button>
+            </form>
         </div>
     );
 }
