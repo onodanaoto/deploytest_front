@@ -19,7 +19,7 @@ export default function Home() {
 
   // フォーム送信時に呼び出される関数です。
   const handleDateSubmit = async (e) => {
-    // フォームのデフォルトの送信動作を防ぎま��。
+    // フォームのデフォルトの送信動作を防ぎま。
     e.preventDefault();
     
     try {
@@ -136,7 +136,7 @@ export default function Home() {
         {idResponse && <p>Flaskからの応答: {idResponse}</p>}
       </div>
 
-      {/* POSTリクエス��セクション */}
+      {/* POSTリクエストセクション */}
       <div className="space-y-2">
         <h2 className="text-xl font-bold">POSTリクエストを送信</h2>
         <form onSubmit={handlePostRequest} className="flex space-x-2">
