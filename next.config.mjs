@@ -1,5 +1,5 @@
 export default {
-  output: 'export',  // 静的エクスポートの設定
+  output: 'standalone',
   images: {
     unoptimized: true
   }
